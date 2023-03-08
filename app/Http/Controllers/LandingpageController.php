@@ -137,7 +137,7 @@ class LandingpageController extends Controller
 
             if($request->file('ijazahSd')){
                 $file= $request->file('ijazahSd');
-                $filename= 'file_ijazah_sd_'.preg_replace('/\s+/', '', $request->full_name).'.'.$file->getClientOriginalExtension();
+                $filename= 'file_ijazah_sd_'.preg_replace('/\s+/', '', $request->fullName).'.'.$file->getClientOriginalExtension();
                 $file->move(public_path('file_ijazah_sd'), $filename);
                 $studentDoc['sd_certificate']= $filename;
 
@@ -145,32 +145,32 @@ class LandingpageController extends Controller
            
             if($request->file('aktaKelahiran')){
                 $file= $request->file('aktaKelahiran');
-                $filename= 'file_akte_lahir_'.preg_replace('/\s+/', '', $request->full_name).'.'.$file->getClientOriginalExtension();
+                $filename= 'file_akte_lahir_'.preg_replace('/\s+/', '', $request->fullName).'.'.$file->getClientOriginalExtension();
                 $file->move(public_path('file_akte_lahir'), $filename);
                 $studentDoc['birth_certificate']= $filename;
             }
 
             if($request->file('kartuKeluarga')){
                 $file= $request->file('kartuKeluarga');
-                $filename= 'file_kk_'.preg_replace('/\s+/', '', $request->full_name).'.'.$file->getClientOriginalExtension();
+                $filename= 'file_kk_'.preg_replace('/\s+/', '', $request->fullName).'.'.$file->getClientOriginalExtension();
                 $file->move(public_path('file_kk'), $filename);
                 $studentDoc['family_card']= $filename;
             }
             if($request->file('pasFoto')){
                 $file= $request->file('pasFoto');
-                $filename= 'file_foto_'.preg_replace('/\s+/', '', $request->full_name).'.'.$file->getClientOriginalExtension();
+                $filename= 'file_foto_'.preg_replace('/\s+/', '', $request->fullName).'.'.$file->getClientOriginalExtension();
                 $file->move(public_path('file_foto'), $filename);
                 $studentDoc['pas_photo']= $filename;
             }
             if($request->file('softCopyRaportSmp')){
                 $file= $request->file('softCopyRaportSmp');
-                $filename= 'file_raport_smp_'.preg_replace('/\s+/', '', $request->full_name).'.'.$file->getClientOriginalExtension();
+                $filename= 'file_raport_smp_'.preg_replace('/\s+/', '', $request->fullName).'.'.$file->getClientOriginalExtension();
                 $file->move(public_path('file_raport_smp'), $filename);
                 $studentDoc['jhs_report']= $filename;
             }
             if($request->file('tandaTangan')){
                 $file= $request->file('tandaTangan');
-                $filename= 'file_ttd_pendaftaran_'.preg_replace('/\s+/', '', $request->full_name).$file->getClientOriginalExtension();
+                $filename= 'file_ttd_pendaftaran_'.preg_replace('/\s+/', '', $request->fullName).$file->getClientOriginalExtension();
                 $file->move(public_path('file_ttd_pendaftaran'), $filename);
                 $studentDoc['signature']= $filename;
             }
