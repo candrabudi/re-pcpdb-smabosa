@@ -407,7 +407,106 @@
               message: 'Agama Ayah Mohon di isi'
             },
           }
-        }
+        },
+        educationFather: {
+          validators: {
+            notEmpty: {
+              message: 'Pendidikan Ayah Mohon di isi'
+            },
+          }
+        },
+        workFather: {
+          validators: {
+            notEmpty: {
+              message: 'Pekerjaan Ayah Mohon di isi'
+            },
+          }
+        },
+        incomeFather: {
+          validators: {
+            notEmpty: {
+              message: 'Penghasilan Ayah Mohon di isi'
+            },
+          }
+        },
+        whatsappFather: {
+          validators: {
+            notEmpty: {
+              message: 'Whatsapp Ayah Mohon di isi'
+            },
+          }
+        },
+        fullNameMother: {
+          validators: {
+            notEmpty: {
+              message: 'Nama Ibu Mohon di isi'
+            },
+          }
+        },
+        birthOfPlaceMother: {
+          validators: {
+            notEmpty: {
+              message: 'Tempat Lahir Ibu Mohon di isi'
+            },
+          }
+        },
+        dateOfBirthMother: {
+          validators: {
+            notEmpty: {
+              message: 'Tanggal Lahir Ibu Mohon di isi'
+            },
+          }
+        },
+        religionMother: {
+          validators: {
+            notEmpty: {
+              message: 'Agama Ibu Mohon di isi'
+            },
+          }
+        },
+        educationMother: {
+          validators: {
+            notEmpty: {
+              message: 'Pendidikan ibu Mohon di isi'
+            },
+          }
+        },
+        workMother: {
+          validators: {
+            notEmpty: {
+              message: 'Pekerjaan ibu Mohon di isi'
+            },
+          }
+        },
+        incomeMother: {
+          validators: {
+            notEmpty: {
+              message: 'Penghasilan ibu Mohon di isi'
+            },
+          }
+        },
+        whatsappMother: {
+          validators: {
+            notEmpty: {
+              message: 'Whatsapp ibu Mohon di isi'
+            },
+          }
+        },
+        addressParent: {
+          validators: {
+            notEmpty: {
+              message: 'Alamat Orangtua Mohon di isi'
+            },
+          }
+        },
+        phoneNumberHous: {
+          validators: {
+            notEmpty: {
+              message: 'Nomor Telepon Rumah Mohon di isi'
+            },
+          }
+        },
+        
       },
       plugins: {
         trigger: new FormValidation.plugins.Trigger(),
@@ -427,31 +526,45 @@
     
     const FormValidation4 = FormValidation.formValidation(wizardValidationFormStep4, {
       fields: {
-        fullNameFather: {
+        ijazahSd: {
           validators: {
             notEmpty: {
-              message: 'Nama Lengkap Ayah Mohon di isi!'
+              message: 'Ijazah SD Mohon di isi!'
             },
           }
         },
-        birthOfPlaceFather: {
+        aktaKelahiran: {
           validators: {
             notEmpty: {
-              message: 'Tempat Lahir Ayah Mohon di isi!'
+              message: 'Akta Kelahiran Mohon di isi!'
             },
           }
         },
-        dateOfBirthFather: {
+        kartuKeluarga: {
           validators: {
             notEmpty: {
-              message: 'Tanggal Lahir Ayah Mohon di isi!'
+              message: 'Kartu Keluarga Mohon di isi!'
             },
           }
         },
-        religionFather: {
+        pasFoto: {
           validators: {
             notEmpty: {
-              message: 'Agama Ayah Mohon di isi'
+              message: 'Foto Mohon di isi'
+            },
+          }
+        },
+        tandaTangan: {
+          validators: {
+            notEmpty: {
+              message: 'Tanda Tangan Mohon di isi'
+            },
+          }
+        },
+        softCopyRaportSmp: {
+          validators: {
+            notEmpty: {
+              message: 'Softcopy Raport SMP Mohon di isi'
             },
           }
         }

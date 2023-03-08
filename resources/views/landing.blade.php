@@ -33,7 +33,7 @@
                             @endif
                             <div id="wizard-validation" class="bs-stepper mt-2">
                                 <div class="bs-stepper-header">
-                                    <!-- <div class="step" data-target="#biodata-siswa-validation">
+                                    <div class="step" data-target="#biodata-siswa-validation">
                                         <button type="button" class="step-trigger">
                                             <span class="bs-stepper-circle">1</span>
                                             <span class="bs-stepper-label mt-1">
@@ -65,7 +65,7 @@
                                     </div>
                                     <div class="line">
                                         <i class="ti ti-chevron-right"></i>
-                                    </div> -->
+                                    </div>
                                     <div class="step" data-target="#page-four">
                                         <button type="button" class="step-trigger">
                                             <span class="bs-stepper-circle">4</span>

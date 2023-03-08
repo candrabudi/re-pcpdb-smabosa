@@ -38,102 +38,102 @@ class LandingpageController extends Controller
                     ->withErrors($validator)
                     ->withInput();
             }
-            // $student = new Student();
-            // $student->nisn = $request->nisn;
-            // $student->full_name = $request->fullName;
-            // $student->gender = $request->gender;
-            // $student->place_of_birth = $request->placeOfBirthStudent;
-            // $student->date_of_birth = $request->dateOfBirthStudent;
-            // $student->religion = $request->religionStudent;
-            // $student->address = $request->addressStudent;
-            // $student->email = $request->emailStudent;
-            // $student->no_telp = $request->noTelpStudent;
-            // $student->no_wa = $request->noWhatsappStudent;
-            // $student->save();
-            // $student->fresh();
+            $student = new Student();
+            $student->nisn = $request->nisn;
+            $student->full_name = $request->fullName;
+            $student->gender = $request->gender;
+            $student->place_of_birth = $request->placeOfBirthStudent;
+            $student->date_of_birth = $request->dateOfBirthStudent;
+            $student->religion = $request->religionStudent;
+            $student->address = $request->addressStudent;
+            $student->email = $request->emailStudent;
+            $student->no_telp = $request->noTelpStudent;
+            $student->no_wa = $request->noWhatsappStudent;
+            $student->save();
+            $student->fresh();
 
-            // $school = new SchoolOrigin();
-            // $school->student_id = $student->id;
-            // $school->school_name = $request->originSchoolStudent;
-            // $school->school_address = $request->addressOriginSchool;
-            // $school->no_telp = $request->noPhoneSchool;
-            // $school->save();
+            $school = new SchoolOrigin();
+            $school->student_id = $student->id;
+            $school->school_name = $request->originSchoolStudent;
+            $school->school_address = $request->addressOriginSchool;
+            $school->no_telp = $request->noPhoneSchool;
+            $school->save();
 
-            // $total_score = $request->scoreSevenGradeSemesterOne + $request->scoreSevenGradeSemesterTwo + $request->scoreEightGradeSemesterOne + $request->scoreEightGradeSemesterTwo + $request->scoreNineGradeSemesterOne +  $request->scoreNineGradeSemesterTwo;
+            $total_score = $request->scoreSevenGradeSemesterOne + $request->scoreSevenGradeSemesterTwo + $request->scoreEightGradeSemesterOne + $request->scoreEightGradeSemesterTwo + $request->scoreNineGradeSemesterOne +  $request->scoreNineGradeSemesterTwo;
 
-            // $studentScore = new StudentScore();
-            // $studentScore->student_id = $student->id;
-            // $studentScore->score_vii_1 = $request->scoreSevenGradeSemesterOne;
-            // $studentScore->score_vii_2 = $request->scoreSevenGradeSemesterTwo;
-            // $studentScore->score_viii_1 = $request->scoreEightGradeSemesterOne;
-            // $studentScore->score_viii_2 = $request->scoreEightGradeSemesterTwo;
-            // $studentScore->score_ix_1 = $request->scoreNineGradeSemesterOne;
-            // $studentScore->score_ix_2 = $request->scoreNineGradeSemesterTwo;
-            // $studentScore->total_score = $total_score;
-            // $studentScore->save();
+            $studentScore = new StudentScore();
+            $studentScore->student_id = $student->id;
+            $studentScore->score_vii_1 = $request->scoreSevenGradeSemesterOne;
+            $studentScore->score_vii_2 = $request->scoreSevenGradeSemesterTwo;
+            $studentScore->score_viii_1 = $request->scoreEightGradeSemesterOne;
+            $studentScore->score_viii_2 = $request->scoreEightGradeSemesterTwo;
+            $studentScore->score_ix_1 = $request->scoreNineGradeSemesterOne;
+            $studentScore->score_ix_2 = $request->scoreNineGradeSemesterTwo;
+            $studentScore->total_score = $total_score;
+            $studentScore->save();
 
 
-            // $total_sick = $request->sickSevenGradeSemesterOne + $request->sickSevenGradeSemesterTwo + $request->sickEightGradeSemesterOne + $request->sickEightGradeSemesterTwo + $request->sickNineGradeSemesterOne + $request->sickNineGradeSemesterTwo;
+            $total_sick = $request->sickSevenGradeSemesterOne + $request->sickSevenGradeSemesterTwo + $request->sickEightGradeSemesterOne + $request->sickEightGradeSemesterTwo + $request->sickNineGradeSemesterOne + $request->sickNineGradeSemesterTwo;
 
-            // $total_permission = $request->permissionSevenGradeSemesterOne + $request->permissionSevenGradeSemesterTwo + $request->permissionEightGradeSemesterOne + $request->permissionEightGradeSemesterTwo + $request->permissionNineGradeSemesterOne + $request->permissionNineGradeSemesterTwo;
+            $total_permission = $request->permissionSevenGradeSemesterOne + $request->permissionSevenGradeSemesterTwo + $request->permissionEightGradeSemesterOne + $request->permissionEightGradeSemesterTwo + $request->permissionNineGradeSemesterOne + $request->permissionNineGradeSemesterTwo;
 
-            // $total_alpa = $request->alphaSevenGradeSemesterOne + $request->alphaSevenGradeSemesterTwo + $request->alphaEightGradeSemesterOne + $request->alphaEightGradeSemesterTwo + $request->alphaNineGradeSemesterOne + $request->alphaNineGradeSemesterTwo;
+            $total_alpa = $request->alphaSevenGradeSemesterOne + $request->alphaSevenGradeSemesterTwo + $request->alphaEightGradeSemesterOne + $request->alphaEightGradeSemesterTwo + $request->alphaNineGradeSemesterOne + $request->alphaNineGradeSemesterTwo;
 
-            // $studentPresence = new StudentPresence();
-            // $studentPresence->student_id = $student->id;
-            // $studentPresence->s_vii_1 = $request->sickSevenGradeSemesterOne;
-            // $studentPresence->i_vii_1 = $request->permissionSevenGradeSemesterOne;
-            // $studentPresence->tk_vii_1 = $request->alphaSevenGradeSemesterOne;
-            // $studentPresence->s_vii_2 = $request->sickSevenGradeSemesterTwo;
-            // $studentPresence->i_vii_2 = $request->permissionSevenGradeSemesterTwo;
-            // $studentPresence->tk_vii_2 = $request->alphaSevenGradeSemesterTwo;
-            // $studentPresence->s_viii_1 = $request->sickEightGradeSemesterOne;
-            // $studentPresence->i_viii_1 = $request->permissionEightGradeSemesterOne;
-            // $studentPresence->tk_viii_1 = $request->alphaEightGradeSemesterOne;
-            // $studentPresence->s_viii_2 = $request->sickEightGradeSemesterTwo;
-            // $studentPresence->i_viii_2 = $request->permissionEightGradeSemesterTwo;
-            // $studentPresence->tk_viii_2 = $request->alphaEightGradeSemesterTwo;
-            // $studentPresence->s_ix_1 = $request->sickNineGradeSemesterOne;
-            // $studentPresence->i_ix_1 = $request->permissionNineGradeSemesterOne;
-            // $studentPresence->tk_ix_1 = $request->alphaNineGradeSemesterOne;
-            // $studentPresence->s_ix_2 = $request->sickNineGradeSemesterTwo;
-            // $studentPresence->i_ix_2 = $request->permissionNineGradeSemesterTwo;
-            // $studentPresence->tk_ix_2 = $request->alphaNineGradeSemesterTwo;
-            // $studentPresence->total_sick = $total_sick;
-            // $studentPresence->total_permission = $total_permission;
-            // $studentPresence->total_alpa = $total_alpa;
-            // $studentPresence->save();
+            $studentPresence = new StudentPresence();
+            $studentPresence->student_id = $student->id;
+            $studentPresence->s_vii_1 = $request->sickSevenGradeSemesterOne;
+            $studentPresence->i_vii_1 = $request->permissionSevenGradeSemesterOne;
+            $studentPresence->tk_vii_1 = $request->alphaSevenGradeSemesterOne;
+            $studentPresence->s_vii_2 = $request->sickSevenGradeSemesterTwo;
+            $studentPresence->i_vii_2 = $request->permissionSevenGradeSemesterTwo;
+            $studentPresence->tk_vii_2 = $request->alphaSevenGradeSemesterTwo;
+            $studentPresence->s_viii_1 = $request->sickEightGradeSemesterOne;
+            $studentPresence->i_viii_1 = $request->permissionEightGradeSemesterOne;
+            $studentPresence->tk_viii_1 = $request->alphaEightGradeSemesterOne;
+            $studentPresence->s_viii_2 = $request->sickEightGradeSemesterTwo;
+            $studentPresence->i_viii_2 = $request->permissionEightGradeSemesterTwo;
+            $studentPresence->tk_viii_2 = $request->alphaEightGradeSemesterTwo;
+            $studentPresence->s_ix_1 = $request->sickNineGradeSemesterOne;
+            $studentPresence->i_ix_1 = $request->permissionNineGradeSemesterOne;
+            $studentPresence->tk_ix_1 = $request->alphaNineGradeSemesterOne;
+            $studentPresence->s_ix_2 = $request->sickNineGradeSemesterTwo;
+            $studentPresence->i_ix_2 = $request->permissionNineGradeSemesterTwo;
+            $studentPresence->tk_ix_2 = $request->alphaNineGradeSemesterTwo;
+            $studentPresence->total_sick = $total_sick;
+            $studentPresence->total_permission = $total_permission;
+            $studentPresence->total_alpa = $total_alpa;
+            $studentPresence->save();
 
-            // $studentFather = new StudentFather();
-            // $studentFather->student_id = $student->id;
-            // $studentFather->father_name = $request->fullNameFather;
-            // $studentFather->place_of_birth = $request->birthOfPlaceFather;
-            // $studentFather->date_of_birth = $request->dateOfBirthFather;
-            // $studentFather->education = $request->educationFather;
-            // $studentFather->religion = $request->religionFather;
-            // $studentFather->profession = $request->workFather;
-            // $studentFather->income = $request->incomeFather;
-            // $studentFather->no_wa = $request->whatsappFather;
-            // $studentFather->save();
+            $studentFather = new StudentFather();
+            $studentFather->student_id = $student->id;
+            $studentFather->father_name = $request->fullNameFather;
+            $studentFather->place_of_birth = $request->birthOfPlaceFather;
+            $studentFather->date_of_birth = $request->dateOfBirthFather;
+            $studentFather->education = $request->educationFather;
+            $studentFather->religion = $request->religionFather;
+            $studentFather->profession = $request->workFather;
+            $studentFather->income = $request->incomeFather;
+            $studentFather->no_wa = $request->whatsappFather;
+            $studentFather->save();
             
-            // $studentMother = new StudentMother();
-            // $studentMother->student_id = $student->id;
-            // $studentMother->mother_name = $request->fullNameMother;
-            // $studentMother->place_of_birth = $request->birthOfPlaceMother;
-            // $studentMother->date_of_birth = $request->dateOfBirthMother;
-            // $studentMother->education = $request->educationMother;
-            // $studentMother->religion = $request->religionMother;
-            // $studentMother->profession = $request->workMother;
-            // $studentMother->income = $request->incomeMother;
-            // $studentMother->no_wa = $request->whatsappMother;
-            // $studentMother->parent_address = $request->addressParent;
-            // $studentMother->no_telp_house = $request->phoneNumberHous;
-            // $studentMother->save();
+            $studentMother = new StudentMother();
+            $studentMother->student_id = $student->id;
+            $studentMother->mother_name = $request->fullNameMother;
+            $studentMother->place_of_birth = $request->birthOfPlaceMother;
+            $studentMother->date_of_birth = $request->dateOfBirthMother;
+            $studentMother->education = $request->educationMother;
+            $studentMother->religion = $request->religionMother;
+            $studentMother->profession = $request->workMother;
+            $studentMother->income = $request->incomeMother;
+            $studentMother->no_wa = $request->whatsappMother;
+            $studentMother->parent_address = $request->addressParent;
+            $studentMother->no_telp_house = $request->phoneNumberHous;
+            $studentMother->save();
 
 
             $studentDoc= new StudentDocument();
 
-            $studentDoc->student_id = 1;
+            $studentDoc->student_id = $student->id;
 
             if($request->file('ijazahSd')){
                 $file= $request->file('ijazahSd');
@@ -178,13 +178,16 @@ class LandingpageController extends Controller
             $studentDoc->save();
 
             DB::commit();
-            return redirect()->route('ppdb.finish', [1]);
+            return redirect()->route('ppdb.finish', $student->id);
             // return redirect()->back();
 
         }catch(\Exception $e){
 
             DB::rollback();
-            return response()->json($e->getMessage());
+            return redirect()
+            ->back()
+            ->withInput();
+            // return response()->json($e->getMessage());
             // return redirect()->back();
         }
 
