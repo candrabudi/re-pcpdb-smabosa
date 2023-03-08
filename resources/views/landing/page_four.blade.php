@@ -2,6 +2,7 @@
 <div id="page-four" class="content">
     <div class="content-header mb-3">
         <h4 class="mb-0">Lampiran</h4>
+        <strong class="text-danger">Catatan untuk upload file ukuran maksimal 2mb/2048kb</strong>
     </div>
     <div class="row g-3">
         <div class="col-sm-6">
