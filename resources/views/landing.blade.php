@@ -22,15 +22,7 @@
                     <!-- Default -->
                     <div class="row">
                         <div class="col-12 mb-4">
-                            @if($errors->has('ijazahSd'))
-                                <div class="alert alert-danger d-flex align-items-center" role="alert">
-                                    <span class="alert-icon text-danger me-2">
-                                        <i class="ti ti-ban ti-xs"></i>
-                                    </span>
-                                    <!-- <strong>{{ $errors->first('ijazahSd') }}</strong> -->
-                                    <strong>Ijazah SD maximal ukuran upload file 2mb / 2048kb</strong>
-                                </div>
-                            @endif
+                            @include('landing.validation')
                             <div id="wizard-validation" class="bs-stepper mt-2">
                                 <div class="bs-stepper-header">
                                     <div class="step" data-target="#biodata-siswa-validation">
